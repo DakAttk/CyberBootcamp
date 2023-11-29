@@ -5,10 +5,10 @@ echo "please type the second integer"
 read y
 echo "please type the final integer"
 read z
-if [$x -eq $y -a $y -eq $z]
+if [$x -eq $y] && [$y -eq $z]
 then echo "Equilateral"
-elif [$x -ne $y -a $y -ne $z]
+elif [$x -ne $y] && [$y -ne $z]
 then echo "Scalene"
-elif [$x -eq $y -a $x -ne $z -o $y -eq $z -a $y -ne $x]
+elif [$x -eq $y] && [$x -ne $z] || [$y -eq $z] && [$y -ne $x]
 then echo "Isosceles"
 fi
